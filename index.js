@@ -1,11 +1,16 @@
 const express = require("express");
 const cors = require("cors");
 const app = express();
-const port = 8080;
+const port = process.env.PORT || 8080;
+require("dotenv").config();
+
+
+
 
 
 app.use(express.json());
 app.use(cors());
+
 
 const events = [
     {
@@ -29,12 +34,16 @@ const events = [
 ]
 
 app.get('/', (req, res) => {
-  res.send('Hello World!')
+  res.send('Welcome!')
 })
 app.get('/events', (req, res) => {
     res.json(events)
-  })
+})
+
+app.get('/users', (req, res) => {
+    res.json(users)
+ })
 
 app.listen(port, () => {
-  console.log(`Example app listening on port ${port}`)
+  console.log(`Running and listening on port ${port}`)
 })
