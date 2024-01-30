@@ -1,11 +1,8 @@
-// const { table } = require("console");
-
 /**
  * @param { import("knex").Knex } knex
  * @returns { Promise<void> }
  */
-
-exports.up = function (knex) {
+exports.up = function(knex) {
     return knex.schema
         .createTable("users",(table) => {
             table.increments("id").primary();
@@ -18,12 +15,13 @@ exports.up = function (knex) {
                 .timestamp("updated_at")
                 .defaultTo(knex.raw("CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP"));
         })
+
 };
 
 /**
  * @param { import("knex").Knex } knex
  * @returns { Promise<void> }
  */
-exports.down = function (knex) {
-    return knex.schema.dropTable("event").dropTable('users');
+exports.down = function(knex) {
+    return knex.schema.dropTable("users");
 };
