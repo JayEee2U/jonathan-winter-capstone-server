@@ -51,24 +51,24 @@ exports.seed = async function (knex) {
             medications: "Not taking any medications",
             concerns: "I am not sleeping well. I tend to wake up not feeling refreshed from sleep.",
         },
-        {
-            id: 6,
-            gender: "non-binary",
-            vaccinations: "chickenpox, COVID, Flu, Measles, Mumps, Meningitis, Rotavirus, Shingles, Tetanus ",
-            family_history: "History of Crohn's disease on my father's side. No knowledge of any serious health history on my mother's side.",
-            current_conditions: "Crohn's disease",
-            medications: "Suffer from headaches that I usually take acetaminophen for, and ustekinumab for Crohn's.",
-            concerns: "Already mentioned.",
-        },
-        {
-            id: 7,
-            gender: "femal",
-            vaccinations: "COVID, Flu, Hepatitis B, Hib, Measles, Mumps, Pneumococcal disease, Tetanus ",
-            family_history: "There has been a history of high blood pressure in the family",
-            current_conditions: "Diabetic",
-            medications: "Metformin",
-            concerns: "All things concidered, I feel like I am in good condition.",
-        },
+        // {
+        //     id: 6,
+        //     gender: "non-binary",
+        //     vaccinations: "chickenpox, COVID, Flu, Measles, Mumps, Meningitis, Rotavirus, Shingles, Tetanus ",
+        //     family_history: "History of Crohn's disease on my father's side. No knowledge of any serious health history on my mother's side.",
+        //     current_conditions: "Crohn's disease",
+        //     medications: "Suffer from headaches that I usually take acetaminophen for, and ustekinumab for Crohn's.",
+        //     concerns: "Already mentioned.",
+        // },
+        // {
+        //     id: 7,
+        //     gender: "female",
+        //     vaccinations: "COVID, Flu, Hepatitis B, Hib, Measles, Mumps, Pneumococcal disease, Tetanus ",
+        //     family_history: "There has been a history of high blood pressure in the family",
+        //     current_conditions: "Diabetic",
+        //     medications: "Metformin",
+        //     concerns: "All things concidered, I feel like I am in good condition.",
+        // },
 
     ]);
 }

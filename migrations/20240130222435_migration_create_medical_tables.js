@@ -9,11 +9,11 @@ exports.up = function(knex) {
         table.string("vaccinations").notNullable();
         table.string("family_history").notNullable();
         table.string("current_conditions").notNullable();
-        table.string("any_current_medications").notNullable();
-        table.string("notes").notNullable();
+        table.string("medications").notNullable();
+        table.string("concerns").notNullable();
+        table.string("notes");
         table.integer("user_id")
-            .unsigned()
-            .notNullable();
+            .unsigned();
         table
             .foreign("user_id")
             .references("id").inTable("users")
