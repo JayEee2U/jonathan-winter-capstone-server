@@ -126,6 +126,27 @@ const remove = async (req, res) => {
       });
     }
   };
+//  FIND medical information by userId -----
+
+const medical = async(req, res) => {
+    try {
+        const medicalFound = await knex("medical")
+        .where({ user_id: req.params.id });
+
+        if (medicalFound.length === 0) {
+            return res.status(404).json({
+                message: `Medical record not found` 
+            });
+          }
+
+          const medicalData = medicalFound[0];
+          res.json(medicalData);
+        } catch (error) {
+          res.status(500).json({
+            message: `Unable to retrieve  medical data`,
+          });         
+    }
+  };
 
 module.exports = {
     index,
@@ -134,4 +155,5 @@ module.exports = {
     add,
     update,
     remove,
+    medical
   }

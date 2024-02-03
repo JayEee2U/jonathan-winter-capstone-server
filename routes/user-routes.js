@@ -16,4 +16,8 @@ router
   .route("/:id/events")
   .get(userController.posts);
 
+  router
+  .route("/:id/medical")
+  .get(userController.medical);
+
 module.exports = router;

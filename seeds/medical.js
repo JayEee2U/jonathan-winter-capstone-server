@@ -14,6 +14,7 @@ exports.seed = async function (knex) {
             current_conditions: "No medical issues at this time",
             medications: "Not taking any medications",
             concerns: "I am not sleeping well. I tend to wake up not feeling refreshed from sleep.",
+            user_id: 2
         },
         {
             id: 2,
@@ -23,6 +24,7 @@ exports.seed = async function (knex) {
             current_conditions: "I am uncomfortable with my weight",
             medications: "Not taking any medications",
             concerns: "I am not sleeping well. I tend to wake up not feeling refreshed from sleep.",
+            user_id: 3
         },
         {
             id: 3,
@@ -32,6 +34,7 @@ exports.seed = async function (knex) {
             current_conditions: "No medical issues at this time",
             medications: "I have been taking pain medication off and on for a back issue from my past",
             concerns: "Occasional numbness in my left leg.",
+            user_id: 4
         },
         {
             id: 4,
@@ -41,6 +44,7 @@ exports.seed = async function (knex) {
             current_conditions: "No medical issues at this time",
             medications: "Not taking any medications",
             concerns: "I am not sleeping well. I tend to wake up not feeling refreshed from sleep.",
+            user_id: 1
         },
         {
             id: 5,
@@ -50,6 +54,7 @@ exports.seed = async function (knex) {
             current_conditions: "No medical issues at this time",
             medications: "Not taking any medications",
             concerns: "I am not sleeping well. I tend to wake up not feeling refreshed from sleep.",
+            user_id: 5
         },
         // {
         //     id: 6,

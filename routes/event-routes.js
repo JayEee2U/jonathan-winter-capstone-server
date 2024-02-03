@@ -4,12 +4,13 @@ const eventController = require('../controllers/event-controller');
 router
     .route('/')
     .get(eventController.index)
-    .post(eventController.add)
-    .delete(eventController.remove);
+    .post(eventController.add);
+    
 
 router 
     .route("/:id")
     .get(eventController.findOne)
-    .patch(eventController.update);
+    .patch(eventController.update)
+    .delete(eventController.remove);
 
 module.exports = router;

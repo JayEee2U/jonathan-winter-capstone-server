@@ -9,7 +9,7 @@ exports.up = function(knex) {
         table.string("location").notNullable();
         table.string("start_time").notNullable();
         table.string("end_time").notNullable();
-        table.string("all_day").notNullable();
+        table.boolean("all_day").notNullable().defaultTo(false);
         table.string("notes");
         table.integer("user_id")
             .unsigned()

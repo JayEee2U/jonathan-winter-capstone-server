@@ -42,7 +42,7 @@ const add = async (req, res) => {
     !req.body.location ||
     !req.body.start_time ||
     !req.body.end_time ||
-    !req.body.all_day ||
+    // !req.body.all_day ||
     !req.body.user_id
     ) {
     return res.status(400).json({
