@@ -13,7 +13,4 @@ module.exports = {
     password: process.env.DB_PASSWORD,
     charset: "utf8",
   },
-  // seeds: {
-  //   directory:'./seeds',
-  //   }
 };
