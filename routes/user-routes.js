@@ -20,4 +20,18 @@ router
   .route("/:id/medical")
   .get(userController.medical);
 
+  router
+  .route("/register")
+  .post(userController.register);
+
+  router
+  .route("/login")
+  .post(userController.login); 
+
+  router
+  .route("/current")
+  .get(userController.current); 
+
+
+
 module.exports = router;
