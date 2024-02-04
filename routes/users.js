@@ -106,7 +106,7 @@ router.get('/', authorize, async ( req, res) => {
 
         res.json(users);
     } catch (err) {
-        res.status(500).json({ message: 'Unabel to retrieve users datat'});
+        res.status(500).json({ message: 'Unable to retrieve users data'});
     }
 });
 

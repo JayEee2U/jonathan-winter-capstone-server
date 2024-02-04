@@ -1,3 +1,8 @@
+const bcrypt = require("bcrypt");
+
+const password = 'password'
+
+
 /**
  * @param { import("knex").Knex } knex
  * @returns { Promise<void> }
@@ -12,6 +17,7 @@ exports.seed = async function (knex) {
       last_name:"Brookfield",
       date_of_birth:"1985-06-03",
       email: "nbrookfield0@feedburner.com",
+      password: bcrypt.hashSync(password, 3)
     },
     {
       id: 2,
@@ -19,6 +25,7 @@ exports.seed = async function (knex) {
       last_name:"Ayscough",
       date_of_birth:"1980-11-26",
       email: "eayscough1@pagesperso-orange.fr",
+      password: bcrypt.hashSync(password, 3)
     },
     {
       id: 3,
@@ -26,6 +33,7 @@ exports.seed = async function (knex) {
       last_name:"McOnie",
       date_of_birth:"1991-02-19",
       email: "dmconie2@netscape.com",
+      password: bcrypt.hashSync(password, 3)
     },
     {
       id: 4,
@@ -33,6 +41,7 @@ exports.seed = async function (knex) {
       last_name:"Dalyiel",
       date_of_birth:"1991-02-19",
       email: "hdalyiel3@fc2.com",
+      password: bcrypt.hashSync(password, 3)
     },
     {
       id: 5,
@@ -40,6 +49,7 @@ exports.seed = async function (knex) {
       last_name:"Nibley",
       date_of_birth:"1962-11-10",
       email: "mnibley4@marketwatch.com",
+      password: bcrypt.hashSync(password, 3)
     },      
   ]);
 }
