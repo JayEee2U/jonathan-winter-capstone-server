@@ -12,4 +12,5 @@ router
     .get(medicalController.findOne)
     .patch(medicalController.update);
 
+
 module.exports = router;
