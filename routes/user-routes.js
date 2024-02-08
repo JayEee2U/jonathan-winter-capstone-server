@@ -6,6 +6,10 @@ router
   .get(userController.index)
   .post(userController.add);
 
+  router
+  .route("/current")
+  .get(userController.current); 
+  
 router
   .route("/:id")
   .get(userController.findOne)
@@ -28,9 +32,7 @@ router
   .route("/login")
   .post(userController.login); 
 
-  router
-  .route("/current")
-  .get(userController.current); 
+  
 
 
 

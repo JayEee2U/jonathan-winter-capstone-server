@@ -42,7 +42,7 @@ const findOne = async (req, res) => {
 const posts = async (req, res) => {
     try {
       const posts = await knex("users")
-        .join("users", "users.events_id", "events.id")
+        .join("events", "users.id", "events.user_id")
         .where({ user_id: req.params.id });
   
       res.json(posts);
@@ -174,8 +174,17 @@ const medical = async(req, res) => {
   
     try {
   
+
         await knex('users').insert(newUser);
-        res.status(201).send('Registered successfully!');
+        const user = await knex('users').where({email: email }).first();
+
+        const token = jwt.sign(
+          { id: user.id, email: user.email },
+          process.env.JWT_KEY,
+          { expiresIn: '24h' }
+      );
+        res.status(201).json({ token: token });
+
     } catch (err) {
         console.log(err);
         res.status(400).send('Failed registration');
@@ -238,7 +247,7 @@ try {
 
    res.json(user); 
 } catch (err) {
-    return res.status(401).send('Invalid auth token:' ,err);
+    return res.status(401).send('Invalid auth token:');
 }
 }
 
